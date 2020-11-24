@@ -39,6 +39,7 @@ Topics to Cover:
 12) Volumet Back-ups
 13) Ansible
 14) ticket tracking (redmine)
-15) ... the linux OS and all it's complexitites
+15) ... the linux OS and all it's complexitites: vi, top, ps, lvm2, grep, find
+16) python/pip 
 
 
