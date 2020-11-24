@@ -1,6 +1,6 @@
 # SERPENTCLOUD
 
-AWS, DevOps, CloudOps, Docker ... training and tutorials 
+AWS, DevOps, CloudOps, Docker, CICD related topics and projects ... 
 
 
 
