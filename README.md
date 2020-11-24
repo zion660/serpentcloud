@@ -41,5 +41,6 @@ Topics to Cover:
 14) ticket tracking (redmine)
 15) ... the linux OS and all it's complexitites: vi, top, ps, lvm2, grep, find
 16) python/pip 
+17) git and gitlow branching
 
 
