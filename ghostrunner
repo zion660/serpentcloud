@@ -1,0 +1,31 @@
+
+#!/bin/bash
+
+adduser --disabled-password --gecos "" devops
+cd /home/devops
+mkdir .ssh
+
+cat << EOF > /home/devops/.ssh/config
+Host *
+    StrictHostKeyChecking no
+EOF
+
+cat << EOF >> /home/devops/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCueM32QbHVjxNma/fWyS9cpbsNyRwo0BOKlQRRR1hnIx8NfFwjT5k5P2j9tP8ealViDNCyKq1hoadGSKQUjowEqzRJVjS4PPGdVD2kq23UkjNbNcxz6KDATdEcUbZ1CEgR90t2xvObXn1eGW/nB51nR1McsmBadsNaY9JLZ5Pn1Yxi8CwgVsayEid4GMNgoHur4OAArQtSxGk3gbVxqEbhNcD2yJIw++o8ZiYbswJ+jQEpYd+wCmXs4VxxaOjUkdFGe01pdmUpho0dyGj6G+K5+ITyeyN7cRuXDV1LYtI1wXsL6UyVc1Bskk5srQlQ142v3a1Eu5ZspptnglIm7ByX devops@814north
+EOF
+
+chown -R devops.devops /home/devops/.ssh
+chmod 600 /home/devops/.ssh/*
+chmod 700 /home/devops/.ssh
+echo "%devops ALL=(ALL) NOPASSWD: LOG_INPUT: ALL"  > /etc/sudoers.d/devops
+
+apt-get update
+apt-get install -y lvm2 wget curl git python3-pip python3-dev build-essential tree
+
+curl -fsSL https://get.docker.com/ | sh
+
+pip3 install -U pip
+pip install -U docker-compose
+
+
+
