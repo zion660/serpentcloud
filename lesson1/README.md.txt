@@ -8,3 +8,5 @@ Task-2:
   create a user
   wait for "first task" to be assinged
   then review how to manage the ticket and begin working on lesson1-task3 ticket
+
+Finished ticket #1
