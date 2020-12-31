@@ -44,3 +44,4 @@ Topics to Cover:
 17) git and gitlow branching
 18) setup cloud9 environment
 
+## Lesson 2
